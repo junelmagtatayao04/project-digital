@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+         <section class="w-full px-8 text-gray-700 bg-white">
+            <div
+                class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+                <div class="relative flex flex-col md:flex-row">
+                    <a href="#_"
+                        class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">
+                        <span class="mx-auto text-xl font-black leading-none text-gray-900 select-none">NelWebDGTL<span
+                                class="text-indigo-600">.</span></span>
+                    </a>
+                    <nav
+                        class="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
+                        <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
+                            @click="page = 'home'">Home</a>
+                        <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
+                            @click="page = 'about'">About</a>
+                        <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
+                            @click="page = 'product'">Product</a>
+                        <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
+                            @click="page = 'contact'">Contact</a>
+                    </nav>
+                </div>
+
+                <div class="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+                    <a href="#"
+                        class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900">
+                        Sign in
+                    </a>
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- homesection -->
+       <section v-if="page === 'home'" class="px-2 py-32 bg-white md:px-0">
+            <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
+                <div class="flex flex-wrap items-center sm:-mx-3">
+                    <div class="w-full md:w-1/2 md:px-3">
+                        <div
+                            class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+                            <h1
+                                class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                <span class="block xl:inline">Useful Tools to</span>
+                                <span class="block text-indigo-600 xl:inline">Help You Build Faster.</span>
+                            </h1>
+                            <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never
+                                been
+                                easier to build beautiful websites that convey your message and tell your story.</p>
+                            <div class="relative flex flex-col sm:flex-row sm:space-x-4">
+                                <a href="#_"
+                                    class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                                    Try It Free
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                                <a href="#_"
+                                    class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                            <img
+                                src="https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- product section -->
+        <section v-if="page === 'product'" class="bg-[url('https://jooinn.com/images/wood-background-1.jpg')]" bg-cover
+            bg-center bg-no-repeat>
+            <div class="h-20"></div>
+            <div class="max-w-7xl mx-auto px-4 ">
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div v-for="product in products" :key="product.id" class="bg-black rounded-md mt-10">
+                            <img :src="product.image" alt="">
+                            <div class="ml-2 mt-2">
+                                <h1 class="font-semibold text-md text-white">{{product.brand}}</h1>
+                                <h1 class="font-semibold text-md text-white">{{product.details}}</h1>
+                                <h1 class="font-bold text-red-600 text-xl text-yellow-600">${{product.price}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- about section -->
+        <section class="bg-[url('https://jooinn.com/images/wood-background-1.jpg')]" bg-cover bg-center>
+            <div class="h-20 bg-white"></div>
+            <div v-if="page === 'about'" class="flex justify-center mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div v-for="about in abouts" :key="about.id" class="h-120">
+                        <img :src="about.icon" alt="" class="rounded-md w-80 h-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section>
+            <div class="max-w-7xl mx-auto px-4">
+                <div v-if="page === 'contact'" class="flex justify-center items-center h-fit mt-10 pb-10">
+
+                    <div class="w-100 h-110 bg-gray-50 shadow-2xl rounded-xl p-5">
+                        <div class="text-center text-2xl font-semibold text-blue-700">
+                            <p>Contact Us</p>
+                        </div>
+
+                        <div class="space-y-3 mt-10">
+                            <input type="text" class="border border-gray-500 rounded-xl w-full py-2 px-4"
+                                placeholder="Name">
+                            <input type="text" class="border border-gray-500 rounded-xl w-full py-2 px-4"
+                                placeholder="E-Mail">
+                            <div>
+                                <textarea class="w-full" name="" id=""></textarea>
+                            </div>
+                            <button
+                                class="bg-blue-800 w-full text-white py-2 text-xl font-bold rounded-full hover:bg-blue-600 cursor-pointer mt-10">
+                                <h1>Submit</h1>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="bg-black">
+                        <h1 class="font-bold text-3xl text-center mb-5 text-white">Follow Us</h1>
+                <div>
+                    <div class="flex justify-center gap-5">
+                        <div
+                            class="text-md text-blue-600 shadow-xl bg-white rounded-full w-10 h-10 flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div
+                            class="text-md text-blue-600 shadow-xl bg-white rounded-full w-10 h-10 flex items-center justify-center">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div
+                            class="text-md text-blue-600 shadow-xl bg-white rounded-full w-10 h-10 flex items-center justify-center font-bold">
+                            <h1>in</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-center mt-5 text-blue-800">250 Executive Park Blvd,Suite 3400
+                            *
+                            New
+                            Agno CA 94134 * Kapalong DDN</h1>
+                        <div class="flex justify-center items-center mt-5 gap-5 text-md text-blue-800">
+                            <i class="fa-solid fa-phone"></i>
+                            <h1 class="font-bold text-1xl">+ 0909-204-7497</h1>
+                            <i class="fa-regular fa-envelope"></i>
+                            <h1 class="font-bold text-md text-center text-1xl">Junelmagtatayao@gmail.com</h1>
+                        </div>
+                    </div>
+                </div>
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between gap-5 text-2xl mt-10 text-blue-600">
+                    <div>
+                        <h1 class="font-bold">Courses</h1>
+                        <h1 class="text-xl font-semibold mt-5">Live Online Training Events <br>
+                            Self-Paced Courses</h1>
+                    </div>
+                    <div class="text-xl font-semibold">
+                        <h1 class="font-bold text-2xl">Consulting</h1>
+                        <div class="mt-5">
+                            <h1>
+                                Intensive Applied Workshops <br>
+                                Customized Research <br>
+                                Expert Review <br>
+                                Keynote Speaking <br>
+                                User Testing <br>
+                                UX Maturity Assessment <br>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-xl font-semibold">
+                        <h1 class="font-bold text-2xl">Help</h1>
+                        <div class="mt-5">
+                            <h1>
+                                Terms & Conditions <br>
+                                Privacy Policy <br>
+                                Copyright & Reprint Policy <br>
+                                Return Policy <br>
+                                Live Course Tech Support <br>
+                                FAQs <br>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-xl font-semibold">
+                        <h1 class="font-bold text-2xl">Company</h1>
+                        <div class="mt-5">
+                            <h1>
+                                About NNGroup <br>
+                                People <br>
+                                News & Careers <br>
+                                Contact Us <br>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+
+        Vue.createApp({
+            data() {
+                return {
+
+                    page: 'home',
+
+
+                    products: [
+                        { id: 1, image: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", brand: "White Luxury Sedan", details: "white Luxury", price: 5000 },
+                        { id: 2, image: "https://images.unsplash.com/photo-1722439667098-f32094e3b1d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNlbHBob25lfGVufDB8fDB8fHww", brand: "EarPhone", details: "EarPhone Black", price: 650 },
+                        { id: 3, image: "https://images.unsplash.com/photo-1569422586959-a95e5b2b934a?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", brand: "iPhone17 Promax", details: "Gray iPhone17", price: 1524 },
+                        { id: 4, image: "https://images.unsplash.com/photo-1543652437-15ae836b33e3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", brand: "white Laptop Apple", details: "white Apple", price: 2000 },
+                        { id: 5, image: "https://images.unsplash.com/photo-1611495464137-6bbcccfa996e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", brand: "Black Android Tablet", details: "Black Tablet", price: 1050 },
+                        { id: 6, image: "https://images.unsplash.com/photo-1590506978404-d3e577192a18?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", brand: "Dominar 450", details: "black", price: 2000 }
+                    ],
+
+                    abouts: [
+                        { id: 1, icon: "https://img.freepik.com/premium-photo/digital-marketing-photos-background-boosting-images_539191-80510.jpg", details: "" },
+                        { id: 2, icon: "https://img.freepik.com/premium-photo/visual-insights-sleek-icons-clear-data-visualization_1252102-32252.jpg", details: "" },
+                        { id: 3, icon: "https://img.freepik.com/premium-photo/high-performance-tech-laptops-creatives-professionals-design_1155708-6572.jpg", details: "" },
+                        { id: 4, icon: "https://img.freepik.com/premium-photo/digital-marketing-photos-background-boosting-images_539191-76923.jpg", details: "" },
+                        { id: 5, icon: "https://tse4.mm.bing.net/th/id/OIP.a8HMsAIpLF-QaYsOzYH24AHaHa?r=0&w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3", details: "" },
+                        { id: 5, icon: "https://img.freepik.com/premium-photo/flat-social-media-icon-background-with-mobile-phone_127934-11963.jpg", details: "" }
+
+                    ],
+                }
+            },
+
+            methods: {
+
+
+
+
+
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
